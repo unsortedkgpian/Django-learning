@@ -1,18 +1,21 @@
-{% load static %}
+{% load static tailwind_tags %} {% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		{% comment %}
-		<title>Document</title>
-		{% endcomment %}
+		<!-- Title block for dynamic title -->
 		<title>{% block title %} chai aur code {% endblock %}</title>
+		<!-- Link to static CSS file -->
 		<link rel="stylesheet" href="{% static 'style.css' %}" />
+		<!-- Include Tailwind CSS -->
+		{% tailwind_css %}
 	</head>
 	<body>
+		<!-- Navigation bar -->
 		<nav>this is our navbar</nav>
+		<!-- Content block for dynamic content -->
 		{% block content %}{% endblock %}
 	</body>
 </html>

@@ -1,19 +1,4 @@
-{% comment %} {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Django learning</title>
-		<!-- <link rel="stylesheet" href="../../static/style.css" /> -->
-		<link rel="stylesheet" href="{% static 'style.css' %}" />
-	</head>
-	<body>
-		<h1>Learning in Process</h1>
-	</body>
-</html>
-{% endcomment %} {% extends "layout.html" %} {% block title %} Home Page{%
-endblock %} {% block content %}
-<h1>Index home page</h1>
-{% endblock content %}
-<h1>Index home page</h1>
+{% extends "layout.html" %} {% block title %}Home Page{% endblock %}
+ {% block content %}
+<h1 class="bg-orange-700 text-5xl">Index home page</h1>
+{% endblock %}
