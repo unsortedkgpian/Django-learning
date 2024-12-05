@@ -1,11 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Atomic hub</title>
-	</head>
-	<body>
-		<h1>All atoms combine together</h1>
-	</body>
-</html>
+{% extends "layout.html" %} {% block title %}Home Page{% endblock %}
+ {% block content %}
+<h1 class="bg-blue-700 text-5xl text:bg-pink-800">Atomic app</h1>
+
+
+{% for data in atomsdata %}
+	<div class="atom-data">
+		<img src="{{data.image.url}}" alt="pic"/>
+		<a href="{% urls 'atom_details' data.id %}"></a>
+	</div>
+{% endfor%}
+
+
+{% endblock %}
+
+

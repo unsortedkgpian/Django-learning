@@ -1,0 +1,15 @@
+{% extends "layout.html" %} {% block title %}docs{% endblock %}
+ {% block content %}
+<h1 class="bg-blue-700 text-5xl text:bg-pink-800">Atomic data/details</h1>
+
+
+{% for data in atomsdata %}
+	<div class="atom-data">
+		<img src="{{data.image.url}}" alt="pic"/>
+	</div>
+{% endfor%}
+
+
+{% endblock %}
+
+
